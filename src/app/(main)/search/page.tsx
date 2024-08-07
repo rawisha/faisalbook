@@ -6,11 +6,12 @@ interface PageProps {
   searchParams: { q: string };
 }
 
-export function generateMetaData({ searchParams: { q } }: PageProps): Metadata {
+export function generateMetadata({ searchParams: { q } }: PageProps): Metadata {
   return {
     title: `Search results for "${q}"`,
   };
 }
+
 export default function Page({ searchParams: { q } }: PageProps) {
   return (
     <main className="flex w-full min-w-0 gap-5">
