@@ -15,7 +15,7 @@ export default function useMediaUpload() {
 
   const [uploadProgress, setUploadProgress] = useState<number>();
 
-  const { startUpload, isUploading } = useUploadThing("attachments", {
+  const { startUpload, isUploading } = useUploadThing("attachment", {
     onBeforeUploadBegin(files) {
       const renamedFiles = files.map((file) => {
         const extension = file.name.split(".").pop();
