@@ -50,12 +50,13 @@ export const fileRouter = {
 
       return { avatarUrl: newAvatarUrl };
     }),
-  attachments: f({
+  attachment: f({
     image: { maxFileSize: "4MB", maxFileCount: 5 },
     video: { maxFileSize: "64MB", maxFileCount: 5 },
   })
     .middleware(async () => {
       const { user } = await validateRequest();
+
       if (!user) throw new UploadThingError("Unauthorized");
 
       return {};
