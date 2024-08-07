@@ -8,7 +8,7 @@ import {
 import { Button } from "../ui/button";
 import { MoreHorizontal, Trash2 } from "lucide-react";
 import { useState } from "react";
-import DeleteCommentDialog from "./DeleteCommentdialog";
+import DeleteCommentDialog from "./DeleteCommentDialog";
 
 interface CommentMoreButtonProps {
   comment: CommentData;
